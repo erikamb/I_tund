@@ -5,15 +5,34 @@
     <title>Hello World</title>
   </head>
   <body>
-    <input type="text" name="Eesnimi" id="eesnimi">
-    <input type="text" name="Perekonnanimi" id="perenimi">
-    <input type="submit" value="Tervita">
-    <div id="output"></div>
+    Eesnimi: <input type="text" name="Eesnimi" id="eesnimi" onkeyup="welcome()"><br>
+    Perenimi: <input type="text" name="Perekonnanimi" id="perenimi" onkeyup="welcome()"<br>
+
+    <div id="output">
+
+    </div>
     <script>
+
+    var first_name;
+    var last_name;
+
+    function welcome(){
+
+      //console.error('töötab');
+      first_name=document.getElementById('eesnimi').value
+      last_name=document.getElementById('perenimi').value
+      console.log("Tere "+first_name + ' ' + last_name);
+
+        //kirjutame html elemendi sisse
+      document.getElementById('output').innerHTML ='<strong>Tere </strong>' + first_name +' '+ last_name;
+
+    }
+
+
+
 
 
     </script>
-
 
   </body>
 </html>
