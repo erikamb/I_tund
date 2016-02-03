@@ -1,8 +1,13 @@
 window.onload = function(){
 
 var clock = document.getElementById('clock');
+writeDate();//selleks et poleks näha 00:00:00
+//käivitan intervalli
+window.setInterval(function(){
+  writeDate();
 
-writeDate();
+}, 500);
+
 };
 
 function writeDate(){
